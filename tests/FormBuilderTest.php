@@ -2,11 +2,11 @@
 
 namespace {
 
-    use Kris\LaravelFormBuilder\Events\AfterFieldCreation;
-    use Kris\LaravelFormBuilder\Events\AfterFormCreation;
-    use Kris\LaravelFormBuilder\Form;
-    use Kris\LaravelFormBuilder\FormBuilder;
-    use Kris\LaravelFormBuilder\FormHelper;
+    use Fastponto\LaravelFormBuilder\Events\AfterFieldCreation;
+    use Fastponto\LaravelFormBuilder\Events\AfterFormCreation;
+    use Fastponto\LaravelFormBuilder\Form;
+    use Fastponto\LaravelFormBuilder\FormBuilder;
+    use Fastponto\LaravelFormBuilder\FormHelper;
 
     class FormBuilderTest extends FormBuilderTestCase
     {
@@ -62,7 +62,7 @@ namespace {
             $this->assertEquals($this->request, $customForm->getRequest());
             $this->assertEquals('/posts', $customForm->getUrl());
             $this->assertEquals([1 => 'choice_1', 2 => 'choice_2'], $customForm->getData('dummy_choices'));
-            $this->assertInstanceOf('Kris\\LaravelFormBuilder\\Form', $customForm);
+            $this->assertInstanceOf('Fastponto\\LaravelFormBuilder\\Form', $customForm);
             $this->assertArrayHasKey('title', $customForm->getFields());
             $this->assertArrayHasKey('body', $customForm->getFields());
         }
@@ -89,14 +89,14 @@ namespace {
             $this->assertEquals(
                 [
                     // Plain: form first
-                    'Kris\LaravelFormBuilder\Events\AfterFormCreation',
-                    'Kris\LaravelFormBuilder\Events\AfterFieldCreation',
-                    'Kris\LaravelFormBuilder\Events\AfterFieldCreation',
+                    'Fastponto\LaravelFormBuilder\Events\AfterFormCreation',
+                    'Fastponto\LaravelFormBuilder\Events\AfterFieldCreation',
+                    'Fastponto\LaravelFormBuilder\Events\AfterFieldCreation',
 
                     // Class: fields first
-                    'Kris\LaravelFormBuilder\Events\AfterFieldCreation',
-                    'Kris\LaravelFormBuilder\Events\AfterFieldCreation',
-                    'Kris\LaravelFormBuilder\Events\AfterFormCreation',
+                    'Fastponto\LaravelFormBuilder\Events\AfterFieldCreation',
+                    'Fastponto\LaravelFormBuilder\Events\AfterFieldCreation',
+                    'Fastponto\LaravelFormBuilder\Events\AfterFormCreation',
                 ],
                 $events
             );
@@ -214,7 +214,7 @@ namespace {
 
 namespace LaravelFormBuilderTest\Forms {
 
-    use Kris\LaravelFormBuilder\Form;
+    use Fastponto\LaravelFormBuilder\Form;
 
     class NamespacedDummyForm extends Form
     {

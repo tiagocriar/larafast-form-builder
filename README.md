@@ -53,7 +53,7 @@ Then add Service provider to `config/app.php`
 ``` php
     'providers' => [
         // ...
-        Kris\LaravelFormBuilder\FormBuilderServiceProvider::class
+        Fastponto\LaravelFormBuilder\FormBuilderServiceProvider::class
     ]
 ```
 
@@ -62,7 +62,7 @@ And Facade (also in `config/app.php`)
 ``` php
     'aliases' => [
         // ...
-        'FormBuilder' => Kris\LaravelFormBuilder\Facades\FormBuilder::class
+        'FormBuilder' => Fastponto\LaravelFormBuilder\Facades\FormBuilder::class
     ]
 
 ```
@@ -85,8 +85,8 @@ Form is created in path `app/Forms/SongForm.php` with content:
 
 namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
-use Kris\LaravelFormBuilder\Field;
+use Fastponto\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Field;
 
 class SongForm extends Form
 {
@@ -117,7 +117,7 @@ Gives:
 
 namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -136,7 +136,7 @@ After that instantiate the class in the controller and pass it to view:
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
-use Kris\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormBuilder;
 
 class SongsController extends BaseController {
 
@@ -171,7 +171,7 @@ Alternative example:
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
-use Kris\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormBuilder;
 use App\Forms\SongForm;
 
 class SongsController extends BaseController {
@@ -208,7 +208,7 @@ If you want to store a model after a form submit considerating all fields are mo
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Kris\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormBuilder;
 use App\SongForm;
 
 class SongFormController extends Controller
@@ -232,7 +232,7 @@ You can only save properties you need:
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Kris\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormBuilder;
 use App\SongForm;
 
 class SongFormController extends Controller
@@ -257,7 +257,7 @@ Or you can update any model after form submit:
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Kris\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormBuilder;
 use App\SongForm;
 
 class SongFormController extends Controller
@@ -329,8 +329,8 @@ Or you can generate forms easier by using simple array
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
-use Kris\LaravelFormBuilder\FormBuilder;
-use Kris\LaravelFormBuilder\Field;
+use Fastponto\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\Field;
 use App\Forms\SongForm;
 
 class SongsController extends BaseController {

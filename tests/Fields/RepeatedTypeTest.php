@@ -1,7 +1,7 @@
 <?php
 
-use Kris\LaravelFormBuilder\Fields\RepeatedType;
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Fields\RepeatedType;
+use Fastponto\LaravelFormBuilder\Form;
 
 class RepeatedTypeTest extends FormBuilderTestCase
 {
@@ -16,8 +16,8 @@ class RepeatedTypeTest extends FormBuilderTestCase
 
         $this->assertEquals(2, count($repeated->getChildren()));
 
-        $this->assertInstanceOf('Kris\LaravelFormBuilder\Fields\InputType', $repeated->first);
-        $this->assertInstanceOf('Kris\LaravelFormBuilder\Fields\InputType', $repeated->second);
+        $this->assertInstanceOf('Fastponto\LaravelFormBuilder\Fields\InputType', $repeated->first);
+        $this->assertInstanceOf('Fastponto\LaravelFormBuilder\Fields\InputType', $repeated->second);
         $this->assertNull($repeated->third);
     }
 

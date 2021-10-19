@@ -1,7 +1,7 @@
 <?php
 
-use Kris\LaravelFormBuilder\Fields\ButtonType;
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Fields\ButtonType;
+use Fastponto\LaravelFormBuilder\Form;
 
 class ButtonTypeTest extends FormBuilderTestCase
 {

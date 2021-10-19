@@ -1,7 +1,7 @@
 <?php
 
-use Kris\LaravelFormBuilder\Fields\EntityType;
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Fields\EntityType;
+use Fastponto\LaravelFormBuilder\Form;
 
 class EntityTypeTest extends FormBuilderTestCase
 {

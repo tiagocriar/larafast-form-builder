@@ -2,12 +2,12 @@
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Contracts\Validation\Factory;
-use Kris\LaravelFormBuilder\FormBuilder;
-use Kris\LaravelFormBuilder\FormHelper;
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormHelper;
+use Fastponto\LaravelFormBuilder\Form;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Database\Eloquent\Model;
-use Kris\LaravelFormBuilder\Filters\FilterResolver;
+use Fastponto\LaravelFormBuilder\Filters\FilterResolver;
 
 class TestModel extends Model {
     protected $fillable = ['m', 'f'];
@@ -138,13 +138,13 @@ abstract class FormBuilderTestCase extends TestCase {
 
     protected function getPackageProviders($app)
     {
-        return ['Kris\LaravelFormBuilder\FormBuilderServiceProvider'];
+        return ['Fastponto\LaravelFormBuilder\FormBuilderServiceProvider'];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Acme' => 'Kris\LaravelFormBuilder\Facades\FormBuilder'
+            'Acme' => 'Fastponto\LaravelFormBuilder\Facades\FormBuilder'
         ];
     }
 

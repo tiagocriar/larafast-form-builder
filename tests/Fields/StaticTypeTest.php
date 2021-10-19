@@ -1,7 +1,7 @@
 <?php
 
-use Kris\LaravelFormBuilder\Fields\StaticType;
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Fields\StaticType;
+use Fastponto\LaravelFormBuilder\Form;
 
 class StaticTypeTest extends FormBuilderTestCase
 {

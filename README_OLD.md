@@ -17,21 +17,24 @@ For laravel 4 version check [laravel4-form-builder](https://github.com/kristijan
 Changelog can be found [here](https://github.com/kristijanhusak/laravel-form-builder/blob/master/CHANGELOG.md)
 
 ## Table of contents
-1. [Installation](#installation)
-2. [Basic usage](#usage)
-  1. [Usage in controllers](#usage-in-controllers)
-  2. [Usage in views](#usage-in-views)
-3. [Plain form](#plain-form)
-4. [Child form](#child-form)
-5. [Named form](#named-form)
-6. [Collection](#collection)
-  1. [Collection of child forms](#collection-of-child-forms)
-  2. [Prototype](#prototype)
-7. [Field customization](#field-customization)
-8. [Changing configuration and templates](#changing-configuration-and-templates)
-9. [Custom fields](#custom-fields)
-10. [Contributing](#contributing)
-11. [Issues and bug reporting](#issues-and-bug-reporting)
+- [Laravel 5 form builder](#laravel-5-form-builder)
+  - [Laravel 4](#laravel-4)
+  - [Changelog](#changelog)
+  - [Table of contents](#table-of-contents)
+    - [Basic usage](#basic-usage)
+      - [Usage in controllers](#usage-in-controllers)
+      - [Usage in views](#usage-in-views)
+    - [Plain form](#plain-form)
+    - [Child form](#child-form)
+    - [Named form](#named-form)
+    - [Collection](#collection)
+      - [Collection of child forms](#collection-of-child-forms)
+      - [Prototype](#prototype)
+    - [Field Customization](#field-customization)
+    - [Changing configuration and templates](#changing-configuration-and-templates)
+    - [Custom fields](#custom-fields)
+    - [Contributing](#contributing)
+    - [Todo](#todo)
 
 ###Installation
 
@@ -50,7 +53,7 @@ Then add Service provider to `config/app.php`
 ``` php
     'providers' => [
         // ...
-        'Kris\LaravelFormBuilder\FormBuilderServiceProvider'
+        'Fastponto\LaravelFormBuilder\FormBuilderServiceProvider'
     ]
 ```
 
@@ -59,7 +62,7 @@ And Facade (also in `config/app.php`)
 ``` php
     'aliases' => [
         // ...
-        'FormBuilder' => 'Kris\LaravelFormBuilder\Facades\FormBuilder'
+        'FormBuilder' => 'Fastponto\LaravelFormBuilder\Facades\FormBuilder'
     ]
 
 ```
@@ -79,7 +82,7 @@ you create form class in path `app/Forms/PostForm.php` that looks like this:
 ``` php
 <?php namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -101,7 +104,7 @@ And that will create form in path `app/Forms/SongForm.php` with content:
 ``` php
 <?php namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class SongForm extends Form
 {
@@ -123,7 +126,7 @@ Forms can be used in controller like this:
 <?php namespace App/Http/Controllers;
 
 use Illuminate\Routing\Controller;
-use Kris\LaravelFormBuilder\FormBuilder;
+use Fastponto\LaravelFormBuilder\FormBuilder;
 
 class SongsController extends BaseController {
 
@@ -384,7 +387,7 @@ It can be any type that is available in the package. Here are some examples:
 
 ``` php
 <?php
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -467,7 +470,7 @@ Then the view will contain:
 ```php
 
 <?php
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class TagsForm extends Form
 {
@@ -578,7 +581,7 @@ And clicking on the button `.add-to-collection` will automatically generate prop
 
 Prototype can be configured in the form class:
 ```php
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -607,7 +610,7 @@ Fields can be easily customized within the class or view:
 ``` php
 <?php namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -885,7 +888,7 @@ And in form, you can use that model to populate some fields like this
 ``` php
 <?php namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -961,7 +964,7 @@ One more way to change template is directly from Form class:
 ``` php
 <?php namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {
@@ -985,7 +988,7 @@ If you want to create your own custom field, you can do it like this:
 ``` php
 <?php namespace App\Forms\Fields;
 
-use Kris\LaravelFormBuilder\Fields\FormField;
+use Fastponto\LaravelFormBuilder\Fields\FormField;
 
 class DatetimeType extends FormField {
 
@@ -1033,7 +1036,7 @@ Or if you want to load it only for a single form, you can do it directly in Buil
 ``` php
 <?php namespace App\Forms;
 
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Form;
 
 class PostForm extends Form
 {

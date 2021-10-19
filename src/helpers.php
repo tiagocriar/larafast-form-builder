@@ -1,7 +1,7 @@
 <?php
 
-use Kris\LaravelFormBuilder\Fields\FormField;
-use Kris\LaravelFormBuilder\Form;
+use Fastponto\LaravelFormBuilder\Fields\FormField;
+use Fastponto\LaravelFormBuilder\Form;
 
 if(!function_exists('getFormBuilderViewPath'))
 {
