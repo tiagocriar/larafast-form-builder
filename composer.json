@@ -1,12 +1,16 @@
 {
-    "name": "kris/laravel-form-builder",
-    "description": "Laravel form builder - symfony like",
-    "keywords": ["laravel", "form", "builder","symfony"],
+    "name": "fastponto/larafast-form-builder",
+    "description": "Larafast Form Builder",
+    "keywords": ["larafast", "laravel", "form", "builder","symfony"],
     "license": "MIT",
     "authors": [
         {
             "name": "Kristijan Husak",
             "email": "husakkristijan@gmail.com"
+        },
+        {
+            "name": "Tiago Oliveira",
+            "email": "tiago.oliveira@fastponto.com.br"
         }
     ],
     "require": {
@@ -24,16 +28,16 @@
         },
         "laravel": {
             "providers": [
-                "Kris\\LaravelFormBuilder\\FormBuilderServiceProvider"
+                "Fastponto\\LaravelFormBuilder\\FormBuilderServiceProvider"
             ],
             "aliases": {
-                "FormBuilder": "Kris\\LaravelFormBuilder\\Facades\\FormBuilder"
+                "FormBuilder": "Fastponto\\LaravelFormBuilder\\Facades\\FormBuilder"
             }
         }
     },
     "autoload": {
-        "psr-0": {
-            "Kris\\LaravelFormBuilder": "src/"
+        "psr-4": {
+            "Fastponto\\LaravelFormBuilder": "src/"
         },
         "classmap": [
             "tests/FormBuilderTestCase.php"
